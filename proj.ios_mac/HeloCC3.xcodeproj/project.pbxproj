@@ -23,6 +23,8 @@
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
+		4A31E41A20F84732000F4386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A31E41C20F84732000F4386 /* Localizable.strings */; };
+		4A31E42020F84962000F4386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A31E42220F84962000F4386 /* InfoPlist.strings */; };
 		4A37D34220F56CB60056E118 /* Bubble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D31E20F56CB40056E118 /* Bubble.cpp */; };
 		4A37D34320F56CB60056E118 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D31F20F56CB40056E118 /* GameOverScene.cpp */; };
 		4A37D34420F56CB60056E118 /* JuniorRD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D32020F56CB40056E118 /* JuniorRD.cpp */; };
@@ -130,6 +132,10 @@
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
 		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		4A31E41B20F84732000F4386 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A31E41D20F8473B000F4386 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A31E42120F84962000F4386 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A31E42320F84966000F4386 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4A37D31C20F56CB30056E118 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		4A37D31E20F56CB40056E118 /* Bubble.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bubble.cpp; sourceTree = "<group>"; };
 		4A37D31F20F56CB40056E118 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
@@ -271,6 +277,8 @@
 				1AF87B5C1F6F77D6007BE51C /* Prefix.pch */,
 				1AF87B5D1F6F77D6007BE51C /* RootViewController.h */,
 				1AF87B5E1F6F77D6007BE51C /* RootViewController.mm */,
+				4A31E41C20F84732000F4386 /* Localizable.strings */,
+				4A31E42220F84962000F4386 /* InfoPlist.strings */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -461,6 +469,7 @@
 				Japanese,
 				French,
 				German,
+				"zh-Hans",
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -516,6 +525,8 @@
 				1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */,
 				4A6E621320F5D02A0059FEB0 /* HelloWorld.png in Resources */,
 				4A6E622720F5D8950059FEB0 /* fonts in Resources */,
+				4A31E42020F84962000F4386 /* InfoPlist.strings in Resources */,
+				4A31E41A20F84732000F4386 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +594,27 @@
 			targetProxy = 1AC6FB24180E99E1004C840B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A31E41C20F84732000F4386 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A31E41B20F84732000F4386 /* en */,
+				4A31E41D20F8473B000F4386 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4A31E42220F84962000F4386 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A31E42120F84962000F4386 /* en */,
+				4A31E42320F84966000F4386 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -726,6 +758,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -752,6 +785,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
