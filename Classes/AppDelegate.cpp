@@ -77,6 +77,17 @@ bool AppDelegate::applicationDidFinishLaunching() {
         searchPaths.push_back("res/iP6P");
         director->getOpenGLView()->setDesignResolutionSize(1242, 2208, ResolutionPolicy::SHOW_ALL);
         cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
+    } else if (director->getVisibleSize().height == 2436) {
+        
+        auto glview = director->getOpenGLView();
+        if(!glview) {
+            glview = GLViewImpl::createWithRect("OneOrZero", Rect(0, 0, 2436, 1125));
+            director->setOpenGLView(glview);
+        }
+        
+        searchPaths.push_back("res/iPX");
+        director->getOpenGLView()->setDesignResolutionSize(1125, 2436, ResolutionPolicy::SHOW_ALL);
+        cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
     }
     
     // turn on display FPS

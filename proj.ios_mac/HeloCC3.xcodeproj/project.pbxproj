@@ -12,7 +12,6 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1AF87B781F6F77F7007BE51C /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AF87B481F6F77D6007BE51C /* AppController.mm */; };
 		1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF87B591F6F77D6007BE51C /* LaunchScreen.storyboard */; };
-		1AF87B891F6F781D007BE51C /* LaunchScreenBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF87B5A1F6F77D6007BE51C /* LaunchScreenBackground.png */; };
 		1AF87B8A1F6F7822007BE51C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF87B5B1F6F77D6007BE51C /* main.m */; };
 		1AF87B8B1F6F782A007BE51C /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AF87B5E1F6F77D6007BE51C /* RootViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -42,7 +41,6 @@
 		4A37D35020F56CB60056E118 /* UserOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D33B20F56CB60056E118 /* UserOptions.cpp */; };
 		4A37D35120F56CB60056E118 /* InGameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D33E20F56CB60056E118 /* InGameMenu.cpp */; };
 		4A37D35220F56CB60056E118 /* NormalCapsule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D34120F56CB60056E118 /* NormalCapsule.cpp */; };
-		4A6E621320F5D02A0059FEB0 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E619020F5D0290059FEB0 /* HelloWorld.png */; };
 		4A6E621420F5D02A0059FEB0 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E619120F5D0290059FEB0 /* CloseNormal.png */; };
 		4A6E621920F5D02A0059FEB0 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E619820F5D0290059FEB0 /* CloseSelected.png */; };
 		4A6E622620F5D8950059FEB0 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E622320F5D8940059FEB0 /* res */; };
@@ -118,7 +116,6 @@
 		1AF87B481F6F77D6007BE51C /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
 		1AF87B581F6F77D6007BE51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AF87B591F6F77D6007BE51C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1AF87B5A1F6F77D6007BE51C /* LaunchScreenBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenBackground.png; sourceTree = "<group>"; };
 		1AF87B5B1F6F77D6007BE51C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AF87B5C1F6F77D6007BE51C /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		1AF87B5D1F6F77D6007BE51C /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -173,7 +170,6 @@
 		4A37D33F20F56CB60056E118 /* PauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseButton.h; sourceTree = "<group>"; };
 		4A37D34020F56CB60056E118 /* StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBar.h; sourceTree = "<group>"; };
 		4A37D34120F56CB60056E118 /* NormalCapsule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NormalCapsule.cpp; sourceTree = "<group>"; };
-		4A6E619020F5D0290059FEB0 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		4A6E619120F5D0290059FEB0 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		4A6E619820F5D0290059FEB0 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		4A6E622320F5D8940059FEB0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -272,7 +268,6 @@
 				1AF87B481F6F77D6007BE51C /* AppController.mm */,
 				1AF87B581F6F77D6007BE51C /* Info.plist */,
 				1AF87B591F6F77D6007BE51C /* LaunchScreen.storyboard */,
-				1AF87B5A1F6F77D6007BE51C /* LaunchScreenBackground.png */,
 				1AF87B5B1F6F77D6007BE51C /* main.m */,
 				1AF87B5C1F6F77D6007BE51C /* Prefix.pch */,
 				1AF87B5D1F6F77D6007BE51C /* RootViewController.h */,
@@ -379,7 +374,6 @@
 				4A6E622420F5D8940059FEB0 /* fonts */,
 				4A6E622320F5D8940059FEB0 /* res */,
 				4A6E622520F5D8940059FEB0 /* sound */,
-				4A6E619020F5D0290059FEB0 /* HelloWorld.png */,
 				4A6E619120F5D0290059FEB0 /* CloseNormal.png */,
 				4A6E619820F5D0290059FEB0 /* CloseSelected.png */,
 			);
@@ -519,11 +513,9 @@
 				4A6E622820F5D8950059FEB0 /* sound in Resources */,
 				4A6E621920F5D02A0059FEB0 /* CloseSelected.png in Resources */,
 				1A88B2641FC3D9C9005C14AE /* Images.xcassets in Resources */,
-				1AF87B891F6F781D007BE51C /* LaunchScreenBackground.png in Resources */,
 				4A6E621420F5D02A0059FEB0 /* CloseNormal.png in Resources */,
 				4A6E622620F5D8950059FEB0 /* res in Resources */,
 				1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */,
-				4A6E621320F5D02A0059FEB0 /* HelloWorld.png in Resources */,
 				4A6E622720F5D8950059FEB0 /* fonts in Resources */,
 				4A31E42020F84962000F4386 /* InfoPlist.strings in Resources */,
 				4A31E41A20F84732000F4386 /* Localizable.strings in Resources */,
@@ -622,6 +614,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = NO;
@@ -661,6 +654,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = NO;
