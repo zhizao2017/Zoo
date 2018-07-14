@@ -22,6 +22,10 @@
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
+		4A2620BC20F9990800CECA7E /* RNHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2620B820F9990800CECA7E /* RNHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		4A2620BD20F9990800CECA7E /* RNHTTPBaseAPIProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2620B920F9990800CECA7E /* RNHTTPBaseAPIProvider.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		4A2620BE20F9990800CECA7E /* RNHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2620BA20F9990800CECA7E /* RNHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		4A2620C120F9992A00CECA7E /* SwitchProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2620C020F9992A00CECA7E /* SwitchProvider.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4A31E41A20F84732000F4386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A31E41C20F84732000F4386 /* Localizable.strings */; };
 		4A31E42020F84962000F4386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A31E42220F84962000F4386 /* InfoPlist.strings */; };
 		4A37D34220F56CB60056E118 /* Bubble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D31E20F56CB40056E118 /* Bubble.cpp */; };
@@ -41,6 +45,8 @@
 		4A37D35020F56CB60056E118 /* UserOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D33B20F56CB60056E118 /* UserOptions.cpp */; };
 		4A37D35120F56CB60056E118 /* InGameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D33E20F56CB60056E118 /* InGameMenu.cpp */; };
 		4A37D35220F56CB60056E118 /* NormalCapsule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D34120F56CB60056E118 /* NormalCapsule.cpp */; };
+		4A63993920F9A3DC008BAF42 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A63993720F9A3DC008BAF42 /* WebViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		4A63993D20F9AE0D008BAF42 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A63993C20F9AE0D008BAF42 /* WebKit.framework */; };
 		4A6E621420F5D02A0059FEB0 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E619120F5D0290059FEB0 /* CloseNormal.png */; };
 		4A6E621920F5D02A0059FEB0 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E619820F5D0290059FEB0 /* CloseSelected.png */; };
 		4A6E622620F5D8950059FEB0 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 4A6E622320F5D8940059FEB0 /* res */; };
@@ -129,6 +135,14 @@
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
 		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		4A2620B520F9990800CECA7E /* RNHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNHTTPRequest.h; sourceTree = "<group>"; };
+		4A2620B620F9990800CECA7E /* RNHTTPBaseAPIProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNHTTPBaseAPIProvider.h; sourceTree = "<group>"; };
+		4A2620B720F9990800CECA7E /* RNHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNHTTPClient.h; sourceTree = "<group>"; };
+		4A2620B820F9990800CECA7E /* RNHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNHTTPRequest.m; sourceTree = "<group>"; };
+		4A2620B920F9990800CECA7E /* RNHTTPBaseAPIProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNHTTPBaseAPIProvider.m; sourceTree = "<group>"; };
+		4A2620BA20F9990800CECA7E /* RNHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNHTTPClient.m; sourceTree = "<group>"; };
+		4A2620BF20F9992A00CECA7E /* SwitchProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchProvider.h; sourceTree = "<group>"; };
+		4A2620C020F9992A00CECA7E /* SwitchProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchProvider.m; sourceTree = "<group>"; };
 		4A31E41B20F84732000F4386 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A31E41D20F8473B000F4386 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4A31E42120F84962000F4386 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -170,6 +184,9 @@
 		4A37D33F20F56CB60056E118 /* PauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseButton.h; sourceTree = "<group>"; };
 		4A37D34020F56CB60056E118 /* StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBar.h; sourceTree = "<group>"; };
 		4A37D34120F56CB60056E118 /* NormalCapsule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NormalCapsule.cpp; sourceTree = "<group>"; };
+		4A63993620F9A3DC008BAF42 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4A63993720F9A3DC008BAF42 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4A63993C20F9AE0D008BAF42 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		4A6E619120F5D0290059FEB0 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		4A6E619820F5D0290059FEB0 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		4A6E622320F5D8940059FEB0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -202,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A63993D20F9AE0D008BAF42 /* WebKit.framework in Frameworks */,
 				294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
@@ -263,6 +281,7 @@
 		1AF87B461F6F77D6007BE51C /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				4A2620B420F9990800CECA7E /* Network */,
 				1A88B2631FC3D9C9005C14AE /* Images.xcassets */,
 				1AF87B471F6F77D6007BE51C /* AppController.h */,
 				1AF87B481F6F77D6007BE51C /* AppController.mm */,
@@ -274,6 +293,10 @@
 				1AF87B5E1F6F77D6007BE51C /* RootViewController.mm */,
 				4A31E41C20F84732000F4386 /* Localizable.strings */,
 				4A31E42220F84962000F4386 /* InfoPlist.strings */,
+				4A2620BF20F9992A00CECA7E /* SwitchProvider.h */,
+				4A2620C020F9992A00CECA7E /* SwitchProvider.m */,
+				4A63993620F9A3DC008BAF42 /* WebViewController.h */,
+				4A63993720F9A3DC008BAF42 /* WebViewController.m */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -295,6 +318,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A63993C20F9AE0D008BAF42 /* WebKit.framework */,
 				294D0D631D0D56D500F7F5D4 /* CoreText.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
@@ -366,6 +390,19 @@
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		4A2620B420F9990800CECA7E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A2620B520F9990800CECA7E /* RNHTTPRequest.h */,
+				4A2620B620F9990800CECA7E /* RNHTTPBaseAPIProvider.h */,
+				4A2620B720F9990800CECA7E /* RNHTTPClient.h */,
+				4A2620B820F9990800CECA7E /* RNHTTPRequest.m */,
+				4A2620B920F9990800CECA7E /* RNHTTPBaseAPIProvider.m */,
+				4A2620BA20F9990800CECA7E /* RNHTTPClient.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		4A6E60F020F5D0290059FEB0 /* Resources */ = {
@@ -540,12 +577,14 @@
 				4A37D34320F56CB60056E118 /* GameOverScene.cpp in Sources */,
 				4A37D34E20F56CB60056E118 /* BlankScene.cpp in Sources */,
 				4A37D34920F56CB60056E118 /* EnhancedCapsule.cpp in Sources */,
+				4A2620BC20F9990800CECA7E /* RNHTTPRequest.m in Sources */,
 				4A37D34720F56CB60056E118 /* Transistor.cpp in Sources */,
 				4A37D34A20F56CB60056E118 /* SeniorRD.cpp in Sources */,
 				1AF87B781F6F77F7007BE51C /* AppController.mm in Sources */,
 				4A37D34420F56CB60056E118 /* JuniorRD.cpp in Sources */,
 				4A37D34C20F56CB60056E118 /* GameScene.cpp in Sources */,
 				4A37D34520F56CB60056E118 /* Capsule.cpp in Sources */,
+				4A2620BD20F9990800CECA7E /* RNHTTPBaseAPIProvider.m in Sources */,
 				1AF87B8B1F6F782A007BE51C /* RootViewController.mm in Sources */,
 				4A37D34D20F56CB60056E118 /* PauseButton.cpp in Sources */,
 				4A37D35020F56CB60056E118 /* UserOptions.cpp in Sources */,
@@ -555,8 +594,11 @@
 				4A37D34620F56CB60056E118 /* IndexScene.cpp in Sources */,
 				4A37D35220F56CB60056E118 /* NormalCapsule.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				4A2620C120F9992A00CECA7E /* SwitchProvider.m in Sources */,
 				4A37D34B20F56CB60056E118 /* StatusBar.cpp in Sources */,
+				4A63993920F9A3DC008BAF42 /* WebViewController.m in Sources */,
 				4A37D34220F56CB60056E118 /* Bubble.cpp in Sources */,
+				4A2620BE20F9990800CECA7E /* RNHTTPClient.m in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);

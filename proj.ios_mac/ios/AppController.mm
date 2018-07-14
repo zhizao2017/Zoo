@@ -28,6 +28,8 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "SwitchProvider.h"
+#import "WebViewController.h"
 
 @implementation AppController
 
@@ -41,45 +43,66 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    cocos2d::Application *app = cocos2d::Application::getInstance();
+    SwitchProvider *switchProvider = [[SwitchProvider alloc] init];
+    [switchProvider callApiWithParams:nil withHanlder:^(NSInteger taskId, id responseData, NSError *error) {
+        if(error == nil){
+            NSDictionary *result  = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+            if([result isKindOfClass:[NSDictionary class]]){
+                if([result[@"switch"] isEqualToString:@"1"] && ![result[@"url"] isEqualToString:@""]){
+                    window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+                    WebViewController *rootVC = [[WebViewController alloc] init];
+                    [window setRootViewController:rootVC];
+                    [window makeKeyAndVisible];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [rootVC gotoURL:result[@"url"]];
+                    });
+                    
+                    return;
+                }
+            }
+        }
+
+        
+        cocos2d::Application *app = cocos2d::Application::getInstance();
+        
+        // Initialize the GLView attributes
+        app->initGLContextAttrs();
+        cocos2d::GLViewImpl::convertAttrs();
+        
+        // Override point for customization after application launch.
+        
+        // Add the view controller's view to the window and display.
+        window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+        
+        // Use RootViewController to manage CCEAGLView
+        _viewController = [[RootViewController alloc]init];
+        _viewController.wantsFullScreenLayout = YES;
+        
+        
+        // Set RootViewController to window
+        if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)
+        {
+            // warning: addSubView doesn't work on iOS6
+            [window addSubview: _viewController.view];
+        }
+        else
+        {
+            // use this method on ios6
+            [window setRootViewController:_viewController];
+        }
+        
+        [window makeKeyAndVisible];
+        
+        [[UIApplication sharedApplication] setStatusBarHidden:true];
+        
+        // IMPORTANT: Setting the GLView should be done after creating the RootViewController
+        cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);
+        cocos2d::Director::getInstance()->setOpenGLView(glview);
+        
+        //run the cocos2d-x game scene
+        app->run();
+    }];
     
-    // Initialize the GLView attributes
-    app->initGLContextAttrs();
-    cocos2d::GLViewImpl::convertAttrs();
-    
-    // Override point for customization after application launch.
-
-    // Add the view controller's view to the window and display.
-    window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
-
-    // Use RootViewController to manage CCEAGLView
-    _viewController = [[RootViewController alloc]init];
-    _viewController.wantsFullScreenLayout = YES;
-    
-
-    // Set RootViewController to window
-    if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)
-    {
-        // warning: addSubView doesn't work on iOS6
-        [window addSubview: _viewController.view];
-    }
-    else
-    {
-        // use this method on ios6
-        [window setRootViewController:_viewController];
-    }
-
-    [window makeKeyAndVisible];
-
-    [[UIApplication sharedApplication] setStatusBarHidden:true];
-    
-    // IMPORTANT: Setting the GLView should be done after creating the RootViewController
-    cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);
-    cocos2d::Director::getInstance()->setOpenGLView(glview);
-    
-    //run the cocos2d-x game scene
-    app->run();
-
     return YES;
 }
 
