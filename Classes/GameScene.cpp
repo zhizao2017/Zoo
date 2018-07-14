@@ -102,7 +102,10 @@ void GameScene::MainLoop(float delta) {
         currentPattern = PNormal;
         this->rightBubble->setVisible(false);
         this->unschedule(schedule_selector(GameScene::PatternReadySchdule));
+        
         this->schedule(schedule_selector(GameScene::PatternNormalSchdule), 1.0f/60);
+        this->schedule(schedule_selector(GameScene::CreateTransistorSchdule), 2.0f);
+        this->schedule(schedule_selector(GameScene::CreateNorCapsuleSchdule), 3.0f);
     }
     if (gameCenter->IsFinalScene() && this->currentPattern == PNormal) {
         this->unschedule(schedule_selector(GameScene::CreateTransistorSchdule));
@@ -111,6 +114,10 @@ void GameScene::MainLoop(float delta) {
         PatternNEClock = 0;
         this->unschedule(schedule_selector(GameScene::PatternNormalSchdule));
         this->schedule(schedule_selector(GameScene::PatternNormalEndSchdule), 1.0f/60);
+        
+        this->schedule(schedule_selector(GameScene::CreateTransistorSchdule), 2.0f);
+        this->schedule(schedule_selector(GameScene::CreateNorCapsuleSchdule), 3.0f);
+        this->schedule(schedule_selector(GameScene::CreateEnhancedCapsuleSchdule), 2.0f);
     }
     statusBar->SetScore(gameCenter->GetScore());
 }
@@ -134,15 +141,15 @@ void GameScene::PatternReadySchdule(float delta) {
 
 void GameScene::PatternNormalSchdule(float delta) {
     EachFrameActivity(delta);
-    this->schedule(schedule_selector(GameScene::CreateTransistorSchdule), 2.0f);
-    this->schedule(schedule_selector(GameScene::CreateNorCapsuleSchdule), 3.0f);
+    //this->schedule(schedule_selector(GameScene::CreateTransistorSchdule), 2.0f);
+    //this->schedule(schedule_selector(GameScene::CreateNorCapsuleSchdule), 3.0f);
 }
 
 void GameScene::PatternEnhancedSchdule(float delta) {
     EachFrameActivity(delta);
-    this->schedule(schedule_selector(GameScene::CreateTransistorSchdule), 2.0f);
-    this->schedule(schedule_selector(GameScene::CreateNorCapsuleSchdule), 3.0f);
-    this->schedule(schedule_selector(GameScene::CreateEnhancedCapsuleSchdule), 2.0f);
+    //this->schedule(schedule_selector(GameScene::CreateTransistorSchdule), 2.0f);
+    //this->schedule(schedule_selector(GameScene::CreateNorCapsuleSchdule), 3.0f);
+    //this->schedule(schedule_selector(GameScene::CreateEnhancedCapsuleSchdule), 2.0f);
 }
 
 void GameScene::PatternNormalEndSchdule(float delta){
@@ -205,7 +212,7 @@ void GameScene::CreateTransistor() {
 
 void GameScene::CreateNormalCapsule() {
     NormalCapsule *normalCapsule = NormalCapsule::CreateSpriteWithFrame(rCAPSULE);
-     #warning Random Position
+    #warning Random Position
     float x = cocos2d::random(jr->getPosition().x - 100, jr->getPosition().x - 200);
     float y = cocos2d::random(jr->getPosition().y - 100, jr->getPosition().y + 100);
     normalCapsule->setPosition(x, y);
@@ -215,7 +222,7 @@ void GameScene::CreateNormalCapsule() {
 
 void GameScene::CreateEnhancedCapsule() {
     EnhancedCapsule *enhancedCapsule = EnhancedCapsule::CreateSpriteWithFrame(rCAPSULE);
-#warning Random Position
+    #warning Random Position
     addChild(enhancedCapsule);
     enhancedCapsule->SniffAppearPosition(gameCenter->GetTransistors());
     this->gameCenter->AddCapsule(enhancedCapsule);
