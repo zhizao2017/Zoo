@@ -8,12 +8,13 @@
 #import "WebViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface WebViewController ()
+@interface WebViewController ()<WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, weak) UIButton *forwardBtn;
 @property (nonatomic, weak) UIButton *backBtn;
 @property (nonatomic, weak) WKWebView *webView;
 @property (nonatomic, weak) UIButton *cancelBtn;
+@property (nonatomic, weak) UIButton *refreshBtn;
 
 @end
 
@@ -29,7 +30,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 -(void)gotoURL:(NSString *)url{
     NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
@@ -52,6 +52,16 @@
     [self.webView stopLoading];
 }
 
+-(void)refreshBtnTapped:(UIButton *)button{
+    [self.webView reload];
+}
+
+
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    decisionHandler(WKNavigationActionPolicyAllow);
+    NSLog(@"%@", navigationAction.request.URL);
+}
+
 
 -(void)setupUI{
 
@@ -70,16 +80,26 @@
     [cancelBtn addTarget:self action:@selector(cancelBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     [cancelBtn sizeToFit];
     
-    WKWebView *webView = [[WKWebView alloc] init];
+    UIButton *refreshBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [refreshBtn setTitle:@"刷新" forState:UIControlStateNormal];
+    [refreshBtn addTarget:self action:@selector(refreshBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [refreshBtn sizeToFit];
+    
+    WKWebViewConfiguration *webViewConfig = [[WKWebViewConfiguration alloc] init];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:webViewConfig];
+    webView.navigationDelegate = self;
+    webView.UIDelegate = self;
     
     [self.view addSubview:webView];
     [self.view addSubview:forwardBtn];
     [self.view addSubview:backBtn];
     [self.view addSubview:cancelBtn];
-    
+    [self.view addSubview:refreshBtn];
+
     self.forwardBtn = forwardBtn;
     self.backBtn = backBtn;
     self.cancelBtn = cancelBtn;
+    self.refreshBtn = refreshBtn;
     self.webView = webView;
 }
 
@@ -101,6 +121,10 @@
     
     CGRect wkFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - fNewFrame.size.height);
     self.webView.frame = wkFrame;
+    
+    CGRect rFrame = self.refreshBtn.frame;
+    CGRect rNewFrame = CGRectMake(self.view.bounds.size.width - 10 - fFrame.size.width, cNewFrame.origin.y, fFrame.size.width, rFrame.size.height);
+    self.refreshBtn.frame = rNewFrame;
 }
 
 

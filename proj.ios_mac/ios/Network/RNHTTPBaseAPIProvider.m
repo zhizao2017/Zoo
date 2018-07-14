@@ -34,7 +34,6 @@
     NSMutableDictionary *httpHeaders = [[NSMutableDictionary alloc] init];
     request.httpHeaders = httpHeaders;
     
-
     NSInteger requestId = -1;
     requestId = [[self HTTPClient] sendRequest:request withHanlder:^(NSInteger requestId, NSData *responseData, NSError *error) {
         if(hanlder){
