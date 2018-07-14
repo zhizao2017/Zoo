@@ -29,8 +29,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     std::vector<std::string> searchPaths;
     searchPaths.push_back("sound");
-    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("1.wav");
-    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("2.wav");
+
     //cocos2d::log("%f", director->getVisibleSize().height);
     std::cout << director->getVisibleSize().height << std::endl;
     if (director->getVisibleSize().height == 960) {
@@ -89,6 +88,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->getOpenGLView()->setDesignResolutionSize(1125, 2436, ResolutionPolicy::SHOW_ALL);
         cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
     }
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("1.wav");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("2.wav");
     
     // turn on display FPS
     director->setDisplayStats(false);

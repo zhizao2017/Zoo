@@ -7,6 +7,9 @@
 //
 
 #include "PauseButton.h"
+#include "cocos2d.h"
+
+USING_NS_CC;
 
 PauseButton *PauseButton::CreateSpriteWithFrame() {
     PauseButton *pauseButton = PauseButton::create();
@@ -20,11 +23,25 @@ PauseButton *PauseButton::CreateSpriteWithFrame() {
 void PauseButton::InitPauseButton() {
     cocos2d::Size size = cocos2d::Director::getInstance()->getVisibleSize();
     
+    bool is_iP_X = false;
+    
+    if (Director::getInstance()->getVisibleSize().height == 2436) {
+        is_iP_X = true;
+    }
+    
     this->setTexture(rPause);
-    this->setPosition(size.width - this->getContentSize().width/2 - 5, size.height - this->getContentSize().height/2 - 5);
+    if (is_iP_X) {
+        this->setPosition(size.width - this->getContentSize().width/2 - 5, size.height - this->getContentSize().height/2 - 5 - 85);
+    } else {
+        this->setPosition(size.width - this->getContentSize().width/2 - 5, size.height - this->getContentSize().height/2 - 5);
+    }
         
     cocos2d::Size s = this->getContentSize();
-    this->buttonRect = cocos2d::Rect(size.width - 10 - this->getContentSize().width, size.height - 10 - this->getContentSize().height, size.width - 10, s.height - 10);
+    if (is_iP_X) {
+        this->buttonRect = cocos2d::Rect(size.width - 10 - this->getContentSize().width, size.height - 10 - this->getContentSize().height, size.width - 10, s.height - 10 - 85);
+    } else {
+        this->buttonRect = cocos2d::Rect(size.width - 10 - this->getContentSize().width, size.height - 10 - this->getContentSize().height, size.width - 10, s.height - 10);
+    }
 
     auto touchListener = cocos2d::EventListenerTouchOneByOne::create();
     touchListener->onTouchBegan = CC_CALLBACK_2(PauseButton::onTouchBegan, this);
