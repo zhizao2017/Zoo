@@ -39,8 +39,8 @@ bool IndexScene::init() {
     cocos2d::MenuItemFont::setFontSize(43);
     
     cocos2d::MenuItemFont *item1 = cocos2d::MenuItemFont::create("START", CC_CALLBACK_1(IndexScene::menuItemStartGameCallback, this));
-    cocos2d::MenuItemFont *item2 = cocos2d::MenuItemFont::create("CREDITS", CC_CALLBACK_1(IndexScene::menuItemCreditsCallback, this));
-    cocos2d::Menu *mn = cocos2d::Menu::create(item1, item2, NULL);
+    //cocos2d::MenuItemFont *item2 = cocos2d::MenuItemFont::create("CREDITS", CC_CALLBACK_1(IndexScene::menuItemCreditsCallback, this));
+    cocos2d::Menu *mn = cocos2d::Menu::create(item1, NULL);
     mn->alignItemsVertically();
     this->addChild(mn);
 
